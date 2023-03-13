@@ -38,7 +38,7 @@ services:
             MYSQL_PASSWORD: local
             TZ: 'Asia/Tokyo'
         ports:
-            - '3306:3306'
+            - '3303:3306'
         networks:
             - backend
 #     mailcatcher:
