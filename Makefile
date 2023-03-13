@@ -16,7 +16,7 @@ i-laravel:
 	docker-compose exec php chmod -R 777 src/storage
 	docker-compose exec php chmod -R 777 src/bootstrap/cache
 	mv src/* .
-	mv .[^\.]* .
+	mv src/.[^\.]* .
 	rm -rf src
 ps:
 	docker ps
