@@ -13,10 +13,10 @@ n-bash:
 i-laravel:
 	docker-compose exec php composer create-project --prefer-dist laravel/laravel src
 	docker-compose exec php php src/artisan key:generate
-	docker-compose exec php chmod -R 777 src/storage
-	docker-compose exec php chmod -R 777 src/bootstrap/cache
 	mv src/* .
 	mv src/.[^\.]* .
 	rm -rf src
+	docker-compose exec chown www-data:www-data storage
+	docker-compose exec chown www-data:www-data bootstrap/cache
 ps:
 	docker ps
