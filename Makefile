@@ -13,6 +13,7 @@ n-bash:
 i-laravel:
 	docker-compose exec php composer create-project --prefer-dist laravel/laravel src
 	docker-compose exec php php src/artisan key:generate
+	chmod -R 777 src	
 	mv src/* .
 	mv src/.[^\.]* .
 	rm -rf src
